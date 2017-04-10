@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func test1(x int, y int) (sum, diff int) { // { 不能换行
 	sum = x + y
@@ -46,6 +49,8 @@ func test6(x *int) int {
 	return *x
 }
 
+func a(x int, y string) {}
+
 func main() {
 	fmt.Println(test1(10, 5))
 	// var s = make([]int, 2)
@@ -61,5 +66,7 @@ func main() {
 	x = 1
 	x1 = test6(&x)
 	fmt.Println(x, x1) // 2 2
+	type A func(int, string)
+	fmt.Println(reflect.TypeOf(a))
 
 }

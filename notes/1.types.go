@@ -30,7 +30,10 @@ func main() {
 	fmt.Println(e, f, g)
 	fmt.Println(h, i)
 	// x = 10 error: 修改常量
-	defineType
+	defineType()
+	s := "熊杰"
+	q := []byte(s)
+	fmt.Println(q)
 }
 
 /*

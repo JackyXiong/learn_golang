@@ -94,7 +94,7 @@ func test4() {
 	}
 	n1 := Node{id: 1, data: nil}
 	n2 := Node{id: 2, data: nil, next: &n1}
-	// n3 := Node{2, nil} //  too few values in struct initializer
+	n3 := Node{2, nil}  //  too few values in struct initializer
 	fmt.Println(n1, n2) // {1 <nil> <nil>} {2 <nil> 0xc420084240}
 	type Resource struct {
 		id int
@@ -114,6 +114,9 @@ func test4() {
 	m.name = "tom"
 	m.title = "admin"
 	fmt.Println(m)
+
+	r := Resource{1}
+	fmt.Println(r.id)
 }
 
 func main() {
